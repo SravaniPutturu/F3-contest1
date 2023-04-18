@@ -3,11 +3,10 @@
 // const profession = document.getElementById('profession')
 // const age = document.getElementById('age')
 
-var count = 1;
+var delClicked = false;
 
 var addedEmployees = document.getElementById('addedEmployees')
 
-  // var trList = document.querySelectorAll('tr')
 
 
 function addEmp(){
@@ -22,6 +21,9 @@ function addEmp(){
   var trList = document.querySelectorAll('tr')
   var trLength = trList.length;
 
+
+
+  
 
   var p1 = document.createElement('p');
 
@@ -50,11 +52,10 @@ function addEmp(){
   td2.innerHTML = Name;
   td3.innerHTML = profession;
   td4.innerHTML = age;
-  td5.innerHTML = `<button type="button" onclick="del()">Delete User`
+  td5.innerHTML = `<button type="button" id="del" onclick="del()">Delete User`
 
-  function del(){
-    alert("djbfg")
-  }
+
+
  
 
   tr.appendChild(td1);
@@ -66,11 +67,13 @@ function addEmp(){
   table.appendChild(tr)
   last_line.before(table)
 
-  
 
+
+  
+delClicked = false;
   var p2 = document.createElement('span')
  if(trLength == 1){
-  
+
   p2.innerHTML = "Success Employee added"
   addedEmployees.before(p2)
   p2.classList.add('green')
@@ -82,7 +85,8 @@ function addEmp(){
 
 }
 
-
-
 }
-// del()
+
+function del(){
+  delClicked = true;
+}
