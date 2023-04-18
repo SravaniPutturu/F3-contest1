@@ -1,34 +1,36 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Employees</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-   <p id="head">New Employees</p>
-
-   
-   <form>
-    <div>
-      <span>
-        <label for="">Employee Name</label>
-        <input id="name" type ="text">
-     </span>
-     <span>
-        <label for="">Employee profession</label>
-        <input id="profession" type ="text">
-    </span>
-     <span>
-        <label for="">Enter Age</label>
-        <input id="age" id="" type ="text">
-     </span>
+    <div class="maincontainer">
+        <div class="namecont">
+            <label for="name">Employee Name</label>
+            <input id="name" name="name" type ="text">
+        </div>
+        <div class="professioncont">
+            <label for="profession">Employee profession</label>
+            <input id="profession" name="profession" type ="text">
+        </div>
+        <div class="agecont">
+            <label for="age">Enter Age</label>
+            <input id="age" name="age" id="" type ="text">
+        </div>
     </div>
-    <button style="padding: 5px; width:130px; margin:20 0 20 0;" type = "button" onclick="addEmp()">Add User</button>
-   </form>
-   <div id="addedEmployees">Added Employees</div>
-   <p id="last-line">you have 0 employees.</p>
+
+    <button type="button" id="addUser">Add User</button>
+
+    <p class="status-msg">Error : Please Make sure All fields are filled before adding in an employee !</p>
+
+    <p>Added Employees</p>
+
+    <div id="employees"></div>
+
+    <div id="emp-li-container">You have 0 employees</div>
 </body>
 <script src="index.js"></script>
 </html>
